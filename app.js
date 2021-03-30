@@ -93,14 +93,14 @@ function filterTodo(event){
 }
 
 function saveLocalTodos(todo){
-    let uct;
-    if(localStorage.getItem('uct') === null){
-        uct = [];
+    let todos;
+    if(localStorage.getItem('todos') === null){
+        todos = [];
     } else {
-        uct = JSON.parse(localStorage.getItem('uct'));
+        todos = JSON.parse(localStorage.getItem('todos'));
     }
-    uct.push(todo);
-    localStorage.setItem('uct',JSON.stringify(uct));
+    todos.push(todo);
+    localStorage.setItem('todos',JSON.stringify(todos));
 }
 
 function getTodos(){
